@@ -1,0 +1,42 @@
+#include "VertexDefinitions.h"
+
+D3D11_INPUT_ELEMENT_DESC VertexPosTexNormTan::vertexDesc[] =
+{
+	{ "POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT,	0, 0,	D3D11_INPUT_PER_VERTEX_DATA, 0 },
+	{ "TEXCOORD", 0, DXGI_FORMAT_R32G32_FLOAT,		0, 12,	D3D11_INPUT_PER_VERTEX_DATA, 0 },
+	{ "NORMAL",   0, DXGI_FORMAT_R32G32B32_FLOAT,   0, 20,  D3D11_INPUT_PER_VERTEX_DATA, 0 },
+	{ "TANGENT",  0, DXGI_FORMAT_R32G32B32_FLOAT,   0, 32,  D3D11_INPUT_PER_VERTEX_DATA, 0 }
+};
+UINT VertexPosTexNormTan::stride = sizeof(VertexPosTexNormTan);
+UINT VertexPosTexNormTan::numElements = 4;
+
+D3D11_INPUT_ELEMENT_DESC VertexPosTexNorm::vertexDesc[] =
+{
+	{ "POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT,	0, 0,	D3D11_INPUT_PER_VERTEX_DATA, 0 },
+	{ "TEXCOORD",  0, DXGI_FORMAT_R32G32_FLOAT,		0, 12,	D3D11_INPUT_PER_VERTEX_DATA, 0 },
+	{ "NORMAL",   0, DXGI_FORMAT_R32G32B32_FLOAT,    0, 20,  D3D11_INPUT_PER_VERTEX_DATA, 0 }
+};
+UINT VertexPosTexNorm::stride = sizeof(VertexPosTexNorm);
+UINT VertexPosTexNorm::numElements = 3;
+
+D3D11_INPUT_ELEMENT_DESC VertexPositionColorNormal::vertexDesc[] =
+{
+	{ "POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 0,
+	D3D11_INPUT_PER_VERTEX_DATA, 0 },
+	{ "COLOR", 0, DXGI_FORMAT_R32G32B32A32_FLOAT, 0, 12,
+	D3D11_INPUT_PER_VERTEX_DATA, 0 },
+	{ "NORMAL", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 28,
+	D3D11_INPUT_PER_VERTEX_DATA, 0 }
+};
+UINT VertexPositionColorNormal::numElements = 3;
+UINT VertexPositionColorNormal::stride = sizeof(VertexPositionColorNormal);
+
+D3D11_INPUT_ELEMENT_DESC VertexPositionColor::vertexDesc[] = 
+{
+	{"POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 0,
+	D3D11_INPUT_PER_VERTEX_DATA, 0},
+	{"COLOR", 0, DXGI_FORMAT_R32G32B32A32_FLOAT, 0, 12,
+	D3D11_INPUT_PER_VERTEX_DATA, 0}
+};
+UINT VertexPositionColor::numElements = 2;
+UINT VertexPositionColor::stride = sizeof(VertexPositionColor);
